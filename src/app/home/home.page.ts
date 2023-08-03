@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-
+  constructor() {
+    this.getData();
+  }
+ getData(){
+  fetch('http://aula/api/usuario/listar-todos')
+  .then(t => t.json())
+  .then(console.log)
+ }
 }
